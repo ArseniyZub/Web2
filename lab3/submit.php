@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=u82380', 'u82380', 'ТВОЙ_ПАРОЛЬ');
+    $pdo = new PDO('mysql:host=localhost;dbname=u82380', 'u82380', '43t3w4wE$');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Валидация
