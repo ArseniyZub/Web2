@@ -1,0 +1,45 @@
+<form>
+  <h2>Форма регистрации</h2>
+
+  <label for="fio">ФИО:</label>
+  <input type="text" id="fio" name="fio"><br><br>
+
+  <label for="tel">Телефон:</label>
+  <input type="tel" id="tel" name="tel"><br><br>
+
+  <label for="email">e-mail:</label>
+  <input type="email" id="email" name="email"><br><br>
+
+  <label for="birth_date">Дата рождения:</label>
+  <input type="date" id="birth_date" name="birth_date"><br><br>
+
+  <label>Пол:</label>
+  <input type="radio" id="male" name="sex" value="мужской">
+  <label for="male">Мужской</label>
+  <input type="radio" id="female" name="sex" value="женский">
+  <label for="female">Женский</label><br><br>
+
+  <label>Любимый язык программирования:</label>
+  <select multiple name="lang[]">
+    <option value="Pascal">Pascal</option>
+    <option value="C">C</option>
+    <option value="C++">C++</option>
+    <option value="JavaScript">JavaScript</option>
+    <option value="PHP">PHP</option>
+    <option value="Python">Python</option>
+    <option value="Java">Java</option>
+    <option value="Haskel">Haskel</option>
+    <option value="Clojure">Clojure</option>
+    <option value="Prolog">Prolog</option>
+    <option value="Scala">Scala</option>
+    <option value="Go">Go</option>
+  </select><br><br>
+
+  <label for="bio">Биография:</label>
+  <textarea id="bio" name="bio"></textarea><br><br>
+
+  <input type="checkbox" id="contract" name="contract">
+  <label for="contract">С контрактом ознакомлен (а)</label><br><br>
+
+  <button type="submit">Сохранить</button>
+</form>
