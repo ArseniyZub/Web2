@@ -4,7 +4,6 @@ try {
     $pdo = new PDO('mysql:host=localhost;dbname=u82380', 'u82380', '43t3w4wE$');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Валидация
     if (!preg_match("/^[a-zA-Zа-яА-Я\s]{1,150}$/u", $_POST['fio'])) {
         die("Ошибка: некорректное ФИО");
     }
@@ -13,7 +12,6 @@ try {
         die("Ошибка: выберите хотя бы один язык");
     }
 
-    // Вставка заявки
     $stmt = $pdo->prepare("INSERT INTO application 
         (fio, phone, email, birthdate, gender, biography, contract) 
         VALUES (?, ?, ?, ?, ?, ?, ?)");
@@ -30,7 +28,6 @@ try {
 
     $app_id = $pdo->lastInsertId();
 
-    // Вставка языков
     $stmtLang = $pdo->prepare("INSERT INTO application_language 
         (application_id, language_id) VALUES (?, ?)");
 
