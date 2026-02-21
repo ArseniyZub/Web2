@@ -21,10 +21,17 @@ Email:<br>
 Дата рождения:<br>
 <input type="date" name="birthdate" required><br><br>
 
-Пол:<br>
-<input type="radio" name="gender" value="male" required> Мужской
-<input type="radio" name="gender" value="female"> Женский<br><br>
-
+<div class="field">
+<label>Пол:</label>
+<div class="radio-group">
+    <label class="radio-item">
+        <input type="radio" name="gender" value="male" required> Мужской
+    </label>
+    <label class="radio-item">
+        <input type="radio" name="gender" value="female"> Женский
+    </label>
+</div>
+</div>
 Любимые языки:<br>
 <select name="languages[]" multiple required>
 <option value="1">Pascal</option>

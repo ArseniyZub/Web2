@@ -157,3 +157,16 @@ button:hover {
 label {
     font-weight: bold;
 }
+
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-top: 8px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+}
