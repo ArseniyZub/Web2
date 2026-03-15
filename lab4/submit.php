@@ -85,9 +85,10 @@ try {
         $stmtLang->execute([$app_id, $lang]);
     }
 
-    setcookie("fio", $fio, time() + 365*24*60*60, "/");
-    setcookie("phone", $phone, time() + 365*24*60*60, "/");
-    setcookie("email", $email, time() + 365*24*60*60, "/");
+    setcookie("fio", "", time() - 3600, "/");
+    setcookie("phone", "", time() - 3600, "/");
+    setcookie("email", "", time() - 3600, "/");
+    setcookie("values", "", time() - 3600, "/");
 
     setcookie("success", "1", 0, "/");
 

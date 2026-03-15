@@ -49,12 +49,6 @@ if (isset($_COOKIE["success"])) {
 
 <body>
 
-<?php if (!empty($errors)): ?>
-    <div class="error-text">
-    Пожалуйста исправьте ошибки в форме
-    </div>
-<?php endif; ?>
-
 <form action="submit.php" method="POST">
 
     <h2>Форма заявки</h2>
@@ -118,15 +112,15 @@ if (isset($_COOKIE["success"])) {
 
     Пол:<br>
 
-    <label>
-        <input
-            type="radio"
-            name="gender"
-            value="male"
-            <?= (isset($values['gender']) && $values['gender'] == "male") ? "checked" : "" ?>
-        >
-        Мужской
-    </label>
+    <div class="gender-group">
+        <label>
+            <input type="radio" name="gender" value="male"> Мужской
+        </label>
+
+        <label>
+            <input type="radio" name="gender" value="female"> Женский
+        </label>
+    </div>
 
     <label>
         <input
