@@ -121,17 +121,6 @@ if (isset($_COOKIE["success"])) {
             <input type="radio" name="gender" value="female"> Женский
         </label>
     </div>
-
-    <label>
-        <input
-            type="radio"
-            name="gender"
-            value="female"
-            <?= (isset($values['gender']) && $values['gender'] == "female") ? "checked" : "" ?>
-        >
-        Женский
-    </label>
-
     <br><br>
 
     Любимые языки:<br>
