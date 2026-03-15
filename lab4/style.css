@@ -170,3 +170,14 @@ label {
     gap: 6px;
     font-weight: normal;
 }
+
+.error{
+border:2px solid red;
+}
+
+.error-text{
+color:red;
+font-size:13px;
+margin-bottom:10px;
+display:block;
+}
