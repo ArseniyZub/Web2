@@ -114,11 +114,11 @@ if (isset($_COOKIE["success"])) {
 
     <div class="gender-group">
         <label>
-            <input type="radio" name="gender" value="male"> Мужской
+            <input type="radio" name="gender" value="1"> Мужской
         </label>
 
         <label>
-            <input type="radio" name="gender" value="female"> Женский
+            <input type="radio" name="gender" value="2"> Женский
         </label>
     </div>
     <br><br>
