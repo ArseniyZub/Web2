@@ -30,6 +30,10 @@ if (!preg_match("/^[a-zA-Zа-яА-Я0-9\s.,!?-]{1,1000}$/u", $biography)) {
     $errors['biography'] = "Недопустимые символы";
 }
 
+if (!in_array($gender, ['1','2'])) {
+    $errors['gender'] = "Выберите пол";
+}
+
 if (empty($languages)) {
     $errors['languages'] = "Выберите хотя бы один язык";
 }
@@ -85,9 +89,7 @@ try {
         $stmtLang->execute([$app_id, $lang]);
     }
 
-    setcookie("fio", "", time() - 3600, "/");
-    setcookie("phone", "", time() - 3600, "/");
-    setcookie("email", "", time() - 3600, "/");
+    setcookie("errors", "", time() - 3600, "/");
     setcookie("values", "", time() - 3600, "/");
 
     setcookie("success", "1", 0, "/");
