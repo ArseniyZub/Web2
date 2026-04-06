@@ -93,8 +93,8 @@ if (isset($_SESSION['user_id'])) {
     $app_id = $pdo->lastInsertId();
 
     // сохранение логин/пароль
-    $_SESSION['login'] = $login;
-    $_SESSION['password'] = $password;
+    $_SESSION['generated_login'] = $login;
+    $_SESSION['generated_password'] = $password;
 
     $_SESSION['user_id'] = $app_id;
 }
