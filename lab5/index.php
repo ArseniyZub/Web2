@@ -94,7 +94,7 @@ if (isset($_SESSION['user_id'])) {
         <?php else: ?>
 
             <div>
-                Вы вошли как <b><?= $_SESSION['user_login'] ?></b>
+                Вы вошли как <b><?= htmlspecialchars($user['login'] ?? '') ?></b>
                 <a href="logout.php">Выйти</a>
             </div>
 
