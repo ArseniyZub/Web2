@@ -62,6 +62,9 @@ if (isset($_SESSION['user_id'])) {
         WHERE id=?
     ");
 
+    if (empty($birthdate)) {
+        $birthdate = null;
+    }
     $stmt->execute([
         $fio, $phone, $email, $birthdate, $gender,
         $biography, $contract ? 1 : 0,
